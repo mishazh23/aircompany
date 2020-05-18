@@ -1,5 +1,5 @@
 package entity.model;
 
-public enum ExperimentalTypes {
+public enum ExperimentalType {
     LIFTING_BODY, HYPERSONIC, HIGH_ALTITUDE, VTOL
 }
