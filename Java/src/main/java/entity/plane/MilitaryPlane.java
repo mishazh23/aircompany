@@ -5,7 +5,6 @@ import entity.model.MilitaryType;
 import java.util.Objects;
 
 public class MilitaryPlane extends Plane{
-
     private MilitaryType type;
 
     public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
@@ -26,9 +25,15 @@ public class MilitaryPlane extends Plane{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MilitaryPlane)) return false;
-        if (!super.equals(o)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof MilitaryPlane)){
+            return false;
+        }
+        if (!super.equals(o)){
+            return false;
+        }
         MilitaryPlane that = (MilitaryPlane) o;
         return type == that.type;
     }
